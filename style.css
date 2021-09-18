@@ -1,0 +1,44 @@
+body{
+    background-color: beige;
+    display: grid;
+    padding-top: 2rem;
+  }
+  h4,#no-items{
+    text-align: center;
+    font-size: larger;
+  }
+  .error {
+     color: #FF0000;
+  }
+  .addingPane{
+    padding: 1rem;
+    background-color: rgb(3, 62, 85);
+    color: white;
+    border-radius: 1rem 1rem 0 0;
+  }
+  .items {
+    padding: 1rem;
+    background-color: rgb(105, 173, 60);
+    border-radius: 0 0 1rem 1rem;
+    padding-bottom: 2rem;
+  }
+  #add-item{
+    background-color: rgb(105, 173, 60);
+    color: white;
+  }
+  .theTodoApp{
+    margin: 0 auto;
+  }
+  
+  input[type="text"]{
+    outline: none;
+    height: 2rem;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    font-size: larger;
+  }
+  input[type="button"]{
+   font-size: larger;
+   border-radius: 1rem;
+   padding: 0.5rem;
+  }

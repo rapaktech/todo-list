@@ -1,1 +1,1 @@
-# A to-do list app built using HTML and VanillaJS.
+# A to-do list app built using HTML, CSS and VanillaJS

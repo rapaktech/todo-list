@@ -17,9 +17,14 @@ item.addEventListener("keyup", function (event) {
 
 // Function to add task to DOM
 function addTask () {
-    const item = document.getElementById("item");
+  const item = document.getElementById("item");
+  if (item.value === "") {
+    document.querySelector('.error').innerHTML = "Please input something";
+  } else {
+    document.querySelector('.error').innerHTML = "*";
     var a = document.createElement("INPUT");
     a.setAttribute("type", "checkbox");
+    a.setAttribute("onclick", "strikeThrough(this)");
     a.setAttribute("id", "checkbox-" + item.value);
     a.setAttribute("name", item.value);
     var x = document.createElement("LABEL");
@@ -74,6 +79,7 @@ function addTask () {
     list.appendChild(b);
     list.appendChild(c);
     item.value = "";
+  }
 }
 
 
@@ -83,6 +89,20 @@ function editTask(task) {
     let saveId = "save-" + task.name;
     document.getElementById(valueId).disabled = false;
     document.getElementById(saveId).disabled = false;
+}
+
+
+// Function to toggle 'strikethrough' attribute
+function strikeThrough(task) {
+    let checkboxId = "checkbox-" + task.name;
+    let labelId = "label-" + task.name;
+    let checkbox = document.getElementById(checkboxId);
+    let label = document.getElementById(labelId);
+    if (checkbox.checked) { 
+      label.setAttribute("style", "text-decoration-line:line-through");
+    } else {
+      label.setAttribute("style", "text-decoration-line:none");
+    }
 }
 
 
